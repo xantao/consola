@@ -43,7 +43,7 @@ export class BasicReporter implements ConsolaReporter {
   }
 
   formatDate(date: Date, opts: FormatOptions) {
-    return opts.date ? date.toLocaleTimeString() : "";
+    return opts.date ? opts.date === "iso" ? date.toISOString() : date.toLocaleTimeString() : "";
   }
 
   filterAndJoin(arr: any[]) {

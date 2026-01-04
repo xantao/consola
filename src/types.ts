@@ -76,7 +76,7 @@ export interface FormatOptions {
    * Whether to include timestamp information in log messages.
    * @optional
    */
-  date?: boolean;
+  date?: boolean | "iso";
 
   /**
    * Whether to use colors in the output.
